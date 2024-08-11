@@ -1,0 +1,42 @@
+#myLogo {
+    display: flex;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    animation: mymove 5s infinite;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    margin-top: 70px;
+    padding: 10px;
+    background-color: #f3eded;
+    box-shadow: 10px 10px 1px rgba(117, 115, 115, 0.3);
+  }
+  
+  @keyframes mymove {
+    50% {
+      border: 15px solid lightblue;
+    }
+  }
+  
+  #services {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background-color: orange;
+    font-weight: 100;
+    gap: 5px;
+  }
+  section {
+    flex: 1;
+    background-color: #0e9aa7;
+    border: #ee964b;
+    display: flex;
+    justify-content: center;
+  }
+  .footer {
+    flex: 1;
+    background-color: #ee964b;
+    display: flex;
+    justify-content: center;
+  }
