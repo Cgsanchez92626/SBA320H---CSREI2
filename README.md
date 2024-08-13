@@ -32,7 +32,7 @@
 
 # o Using React-Redux toolkit - in authSlice to manage the login state
 
-# Also in PropertySlice using createSlice, createAsyncThunk and axios
+# Also in propertySlice using createSlice, createAsyncThunk and axios
 
 # to manage API call for property listing
 

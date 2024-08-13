@@ -53,26 +53,8 @@ const Listings = () => {
               placeholder="Enter zip code"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
-              style={{
-                width: "50%",
-                padding: "10px",
-                marginBottom: "15px",
-                boxSizing: "border-box",
-              }}
             />
-            <button
-              onClick={handleSubmit}
-              style={{
-                width: "50%",
-                padding: "10px",
-                backgroundColor: "#0e9aa7",
-                color: "white",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              Submit
-            </button>
+            <button onClick={handleSubmit}>Submit</button>
           </div>
           {isSubmitted && (
             <div className="carousel-container">

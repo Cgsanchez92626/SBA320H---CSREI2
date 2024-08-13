@@ -47,7 +47,7 @@ function AboutMe() {
       <div>
         <h2>PROFESSIONAL BACKGROUND</h2>
         <br />
-        <p class="MyBio">
+        <p className="MyBio">
           With a passion for investing in real estate for over 25 years, and a
           commitment to listening for what people want from real estate
           investments, Carmen brings these attributes together to best serve her

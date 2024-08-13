@@ -28,7 +28,7 @@ main {
   
   .zip-container input[type="text"] {
     width: 100%; /* Make input fields fill the width of their container */
-    padding: 10px; Add padding for input fields
+    padding: 10px; /*Add padding for input fields */
     margin-bottom: 15px; /* Add margin between input fields */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
   }
