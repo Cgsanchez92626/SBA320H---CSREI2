@@ -16,7 +16,7 @@ export const fetchProperties = createAsyncThunk(
     return response.data.props;
   }
 );
-console.log(url);
+
 const propertySlice = createSlice({
   name: "properties",
   initialState: {

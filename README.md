@@ -36,7 +36,7 @@
 
 # to manage API call for property listing
 
-# o A link to your live site.
+# o A link to the live site: https://sba320h-csrei2.onrender.com/
 
 # o Usage instructions, use the following credentials to authenticate
 
