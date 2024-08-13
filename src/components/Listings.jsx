@@ -17,6 +17,8 @@ const Listings = () => {
     // Future logic here to handle other side effects
   }, [properties]);
 
+  console.log("Hello")
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (zipCode) {
