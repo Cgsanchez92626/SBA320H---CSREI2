@@ -25,13 +25,17 @@ header {
 }
 
 nav a {
-  line-height: 3rem;
+  line-height: 1rem;
   padding: 0 1rem;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
 }
-
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 /* Styling for top menu */
 .top-menu {
   background-color: var(--top-menu-bg);
@@ -53,7 +57,7 @@ nav a {
   position: absolute;
   top: 100%; /* Position below the top-menu */
   left: 0;
-  width: 100%; /* Adjust width as needed */
+  /* width: 100%; Adjust width as needed */
   display: flex;
   flex-direction: column;
   z-index: 200;
@@ -69,6 +73,9 @@ nav a {
   text-decoration: none;
   color: white;
   padding: 1rem;
+  white-space: nowrap; /* Prevent wrapping of text */
+  overflow: hidden; /* Hide overflow text */
+  /* text-overflow: ellipsis; Add ellipsis if text overflows */
 }
 
 .signout {
@@ -92,8 +99,10 @@ nav a {
 
 .top-menu a:hover {
   background-color: var(--sub-menu-bg);
+  color: var(--main-bg);
 }
 
 .sub-menu a:hover {
   background-color: var(--top-menu-bg);
+  color: var(--main-bg);
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../features/auth/authSlice";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,42 +13,48 @@ const Navbar = () => {
   // Handle Logout
   const handleLogout = (event) => {
     event.preventDefault();
-    console.log("Logging out...");
+    // console.log("Logging out...");
     dispatch(logout());
     // Redirect to login page
     navigate("/login");
   };
 
-const menuLinks = [
-  { text: "home", href: "/home" },
-  {
-    text: "about me",
-    href: "/about",
-  },
-  {
-    text: "services",
-    href: "/services",
-  },
-  {
-    text: "account",
-    href: "#",
-    subLinks: isLoggedIn
-      ? [
-          {
-            classname: "signout",
-            text: "sign-out",
-            href: "#",
-            onClick: handleLogout,
-          },
-        ]
-      : [{ classname: "signin", text: "sign-in", href: "/login" }],
-  },
-];
+  const menuLinks = [
+    { text: "home", href: "/" },
+    {
+      text: "about me",
+      href: "/about",
+    },
+    {
+      text: "services",
+      href: "#",
+      subLinks: [
+        { classname: "listings", text: "listings", href: "/listings" },
+      ],
+    },
+    {
+      text: "account",
+      href: "#",
+      subLinks: isLoggedIn
+        ? [
+            {
+              classname: "signout",
+              text: "Sign-Out",
+              href: "#",
+              onClick: handleLogout,
+            },
+          ]
+        : [{ classname: "signin", text: "Sign-In", href: "/login" }],
+    },
+  ];
 
   const handleMenuClick = (event, link) => {
-    event.preventDefault();
     if (link.subLinks) {
+      event.preventDefault();
       setActiveLink(activeLink === link.text ? null : link.text);
+    } else {
+      // Allow default navigation for links without sublinks
+      setActiveLink(null);
     }
   };
 
@@ -66,11 +72,6 @@ const menuLinks = [
       ))}
     </nav>
   );
-
-  useEffect(() => {
-    // Force re-render or update logic if needed
-    console.log("InuseEffect - isLoggedIn changed:", isLoggedIn);
-  }, [isLoggedIn]);
 
   return (
     <header>

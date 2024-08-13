@@ -12,13 +12,13 @@ const authSlice = createSlice({
     login(state) {
       state.isLoggedIn = true;
       localStorage.setItem('isLoggedIn', JSON.stringify(true));
-      console.log("Login action dispatched.");
+      // console.log("Login action dispatched.");
 
     },
     logout(state) {
       state.isLoggedIn = false;
       localStorage.removeItem('isLoggedIn');
-      console.log("Logout action dispatched.");
+      // console.log("Logout action dispatched.");
     },
   },
 });
