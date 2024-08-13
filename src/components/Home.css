@@ -10,6 +10,7 @@
 
 /* Styling for the logo */
 #myLogo {
+  display: flex;
   width: 500px;
   height: 350px;
   border: 2px solid black;
@@ -17,6 +18,7 @@
   padding: 10px;
   background-color: #f3eded;
   box-shadow: 10px 10px 1px rgba(117, 115, 115, 0.3);
+  animation: mymove 5s infinite;
 }
 
 /* Ensure the other styles you have remain intact if needed */
